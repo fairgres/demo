@@ -25,14 +25,6 @@ dockerBuild{
     images = ["${System.env.DOCKER_REGISTRY}/demo:1"]
 }
 
-docker {
-    registryCredentials {
-        url = "${System.env.DOCKER_REGISTRY_URL}"
-        username = "${System.env.DOCKER_USERNAME}"
-        password = "${System.env.DOCKER_PASSWORD}"
-    }
-}
-
 dependencies {
     annotationProcessor("io.micronaut.openapi:micronaut-openapi")
     implementation("io.micronaut:micronaut-validation")
